@@ -23,7 +23,7 @@ const Dashboard = () => {
         >
         <DisplayCard min="60" max="15" val={data.Temperature} label = "Temperature" />
         <DisplayCard min="140" max="0" val={data.Humidity}  label = "Humidity" />
-        <DisplayCard min="400" max="60" val={data.Air_Quality} label = "Air Quality" />
+        <DisplayCard min="500" max="60" val={data.Air_Quality} label = "Air Quality" />
     </Box>
     </Paper>
   )
