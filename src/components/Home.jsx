@@ -78,7 +78,7 @@ const Home = () => {
             padding="1rem"
             gap="0.5rem"
           >
-            <FormControlLabel
+            {/* <FormControlLabel
               label="AC"
               control={
                 <Checkbox
@@ -86,10 +86,12 @@ const Home = () => {
                   icon={<AcUnitIcon />}
                   checkedIcon={<AcUnitIcon />}
                   checked={isAC}
-                  onChange={() => setIsAC((cntState) => !cntState)}
+                  onChange={() => {setIsAC((cntState) => !cntState)
+                    write("/devices/AC", !isAC);
+                  }}
                 />
               }
-            />
+            /> */}
             <FormControlLabel
               label="Air Purifier"
               control={
@@ -98,7 +100,9 @@ const Home = () => {
                   icon={<AirIcon />}
                   checkedIcon={<AirIcon />}
                   checked={isAP}
-                  onChange={() => setIsAP((cntState) => !cntState)}
+                  onChange={() => {setIsAP((cntState) => !cntState)
+                    write("/devices/AP", !isAP);
+                  }}
                 />
               }
             />
